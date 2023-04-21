@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.example.starter.TestMainVerticle" time="1.14" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\gianf\Documents\NetBeansProjects\starter\target\test-classes;C:\Users\gianf\Documents\NetBeansProjects\starter\target\classes;C:\Users\gianf\.m2\repository\io\vertx\vertx-core\4.4.1\vertx-core-4.4.1.jar;C:\Users\gianf\.m2\repository\io\netty\netty-common\4.1.90.Final\netty-common-4.1.90.Final.jar;C:\Users\gianf\.m2\repository\io\netty\netty-buffer\4.1.90.Final\netty-buffer-4.1.90.Final.jar;C:\Users\gianf\.m2\repository\io\netty\netty-transport\4.1.90.Final\netty-transport-4.1.90.Final.jar;C:\Users\gianf\.m2\repository\io\netty\netty-handler\4.1.90.Final\netty-handler-4.1.90.Final.jar;C:\Users\gianf\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.90.Final\netty-transport-native-unix-common-4.1.90.Final.jar;C:\Users\gianf\.m2\repository\io\netty\netty-codec\4.1.90.Final\netty-codec-4.1.90.Final.jar;C:\Users\gianf\.m2\repository\io\netty\netty-handler-proxy\4.1.90.Final\netty-handler-proxy-4.1.90.Final.jar;C:\Users\gianf\.m2\repository\io\netty\netty-codec-socks\4.1.90.Final\netty-codec-socks-4.1.90.Final.jar;C:\Users\gianf\.m2\repository\io\netty\netty-codec-http\4.1.90.Final\netty-codec-http-4.1.90.Final.jar;C:\Users\gianf\.m2\repository\io\netty\netty-codec-http2\4.1.90.Final\netty-codec-http2-4.1.90.Final.jar;C:\Users\gianf\.m2\repository\io\netty\netty-resolver\4.1.90.Final\netty-resolver-4.1.90.Final.jar;C:\Users\gianf\.m2\repository\io\netty\netty-resolver-dns\4.1.90.Final\netty-resolver-dns-4.1.90.Final.jar;C:\Users\gianf\.m2\repository\io\netty\netty-codec-dns\4.1.90.Final\netty-codec-dns-4.1.90.Final.jar;C:\Users\gianf\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.14.0\jackson-core-2.14.0.jar;C:\Users\gianf\.m2\repository\io\vertx\vertx-web\4.4.1\vertx-web-4.4.1.jar;C:\Users\gianf\.m2\repository\io\vertx\vertx-web-common\4.4.1\vertx-web-common-4.4.1.jar;C:\Users\gianf\.m2\repository\io\vertx\vertx-auth-common\4.4.1\vertx-auth-common-4.4.1.jar;C:\Users\gianf\.m2\repository\io\vertx\vertx-bridge-common\4.4.1\vertx-bridge-common-4.4.1.jar;C:\Users\gianf\.m2\repository\io\vertx\vertx-junit5\4.4.1\vertx-junit5-4.4.1.jar;C:\Users\gianf\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.8.2\junit-jupiter-params-5.8.2.jar;C:\Users\gianf\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.1\junit-jupiter-api-5.9.1.jar;C:\Users\gianf\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\gianf\.m2\repository\org\junit\platform\junit-platform-commons\1.9.1\junit-platform-commons-1.9.1.jar;C:\Users\gianf\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\gianf\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.1\junit-jupiter-engine-5.9.1.jar;C:\Users\gianf\.m2\repository\org\junit\platform\junit-platform-engine\1.9.1\junit-platform-engine-1.9.1.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://openjdk.java.net/"/>
+    <property name="user.timezone" value="America/Montevideo"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-11.0.17\bin"/>
+    <property name="sun.java.command" value="C:\Users\gianf\AppData\Local\Temp\surefire11654272415676528806\surefirebooter6710234550845948965.jar C:\Users\gianf\AppData\Local\Temp\surefire11654272415676528806 2023-04-14T00-53-46_980-jvmRun1 surefire2854314973263648227tmp surefire_03706360585044657695tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\gianf\Documents\NetBeansProjects\starter\target\test-classes;C:\Users\gianf\Documents\NetBeansProjects\starter\target\classes;C:\Users\gianf\.m2\repository\io\vertx\vertx-core\4.4.1\vertx-core-4.4.1.jar;C:\Users\gianf\.m2\repository\io\netty\netty-common\4.1.90.Final\netty-common-4.1.90.Final.jar;C:\Users\gianf\.m2\repository\io\netty\netty-buffer\4.1.90.Final\netty-buffer-4.1.90.Final.jar;C:\Users\gianf\.m2\repository\io\netty\netty-transport\4.1.90.Final\netty-transport-4.1.90.Final.jar;C:\Users\gianf\.m2\repository\io\netty\netty-handler\4.1.90.Final\netty-handler-4.1.90.Final.jar;C:\Users\gianf\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.90.Final\netty-transport-native-unix-common-4.1.90.Final.jar;C:\Users\gianf\.m2\repository\io\netty\netty-codec\4.1.90.Final\netty-codec-4.1.90.Final.jar;C:\Users\gianf\.m2\repository\io\netty\netty-handler-proxy\4.1.90.Final\netty-handler-proxy-4.1.90.Final.jar;C:\Users\gianf\.m2\repository\io\netty\netty-codec-socks\4.1.90.Final\netty-codec-socks-4.1.90.Final.jar;C:\Users\gianf\.m2\repository\io\netty\netty-codec-http\4.1.90.Final\netty-codec-http-4.1.90.Final.jar;C:\Users\gianf\.m2\repository\io\netty\netty-codec-http2\4.1.90.Final\netty-codec-http2-4.1.90.Final.jar;C:\Users\gianf\.m2\repository\io\netty\netty-resolver\4.1.90.Final\netty-resolver-4.1.90.Final.jar;C:\Users\gianf\.m2\repository\io\netty\netty-resolver-dns\4.1.90.Final\netty-resolver-dns-4.1.90.Final.jar;C:\Users\gianf\.m2\repository\io\netty\netty-codec-dns\4.1.90.Final\netty-codec-dns-4.1.90.Final.jar;C:\Users\gianf\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.14.0\jackson-core-2.14.0.jar;C:\Users\gianf\.m2\repository\io\vertx\vertx-web\4.4.1\vertx-web-4.4.1.jar;C:\Users\gianf\.m2\repository\io\vertx\vertx-web-common\4.4.1\vertx-web-common-4.4.1.jar;C:\Users\gianf\.m2\repository\io\vertx\vertx-auth-common\4.4.1\vertx-auth-common-4.4.1.jar;C:\Users\gianf\.m2\repository\io\vertx\vertx-bridge-common\4.4.1\vertx-bridge-common-4.4.1.jar;C:\Users\gianf\.m2\repository\io\vertx\vertx-junit5\4.4.1\vertx-junit5-4.4.1.jar;C:\Users\gianf\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.8.2\junit-jupiter-params-5.8.2.jar;C:\Users\gianf\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.1\junit-jupiter-api-5.9.1.jar;C:\Users\gianf\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\gianf\.m2\repository\org\junit\platform\junit-platform-commons\1.9.1\junit-platform-commons-1.9.1.jar;C:\Users\gianf\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\gianf\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.1\junit-jupiter-engine-5.9.1.jar;C:\Users\gianf\.m2\repository\org\junit\platform\junit-platform-engine\1.9.1\junit-platform-engine-1.9.1.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\gianf"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2022-10-18"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-11.0.17"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\gianf\Documents\NetBeansProjects\starter"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\gianf\AppData\Local\Temp\surefire11654272415676528806\surefirebooter6710234550845948965.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="11.0.17+10-LTS-269"/>
+    <property name="user.name" value="abc"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="18.9"/>
+    <property name="localRepository" value="C:\Users\gianf\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\gianf\AppData\Local\Temp\"/>
+    <property name="java.version" value="11.0.17"/>
+    <property name="user.dir" value="C:\Users\gianf\Documents\NetBeansProjects\starter"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-11.0.17\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Haskell\bin;C:\Program Files\Haskell Platform\8.6.5\lib\extralibs\bin;C:\Program Files\Haskell Platform\8.6.5\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;F:\Flutter\Git\cmd;C:\Program Files\Haskell Platform\8.6.5\mingw\bin;&quot;C:\Program Files\Java\jdk-11.0.17\bin;&quot;;C:\Users\gianf\AppData\Roaming\cabal\bin;C:\Users\gianf\AppData\Roaming\local\bin;C:\Users\gianf\AppData\Local\Microsoft\WindowsApps;C:\Users\gianf\.dotnet\tools;C:\Development\Flutter\bin;C:\Users\gianf\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\gianf\Documents\apache-maven-3.9.1-bin\apache-maven-3.9.1\bin;C:\Program Files\Java\jdk-11.0.17\bin;;."/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vm.version" value="11.0.17+10-LTS-269"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="55.0"/>
+  </properties>
+  <testcase name="verticle_deployed{Vertx, VertxTestContext}" classname="com.example.starter.TestMainVerticle" time="1.122"/>
+</testsuite>
