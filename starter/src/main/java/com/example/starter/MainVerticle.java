@@ -61,62 +61,58 @@ public class MainVerticle extends AbstractVerticle {
     int closestDifference = Integer.MAX_VALUE;
     String closestWord = "";
     for (String w : words) {
-      if (
-        w.replaceAll("\\s+", "").equalsIgnoreCase(word.replaceAll("\\s+", ""))
-      ) {
-        //if (w.equals( word)) {
-        continue; // Skip the target word if it's already in the list
-      }
-      int currentValue = readingValue(w);
-      System.out.println("The Value of " + w + " is " + currentValue);
-      int difference = Math.abs(targetValue - currentValue);
-      if (difference < closestDifference) {
-        closestDifference = difference;
-        closestWord = w;
+      if (w.replaceAll("\\s+", "").equalsIgnoreCase(word.replaceAll("\\s+", ""))) {
+        if (w.equals(word)) {
+          continue; // Skip the target word if it's already in the list
+        }
+        int currentValue = readingValue(w);
+        System.out.println("The Value of " + w + " is " + currentValue);
+        int difference = Math.abs(targetValue - currentValue);
+        if (difference < closestDifference) {
+          closestDifference = difference;
+          closestWord = w;
+        }
       }
     }
     return closestWord;
   }
 
-  //readingwordsfromfile
+  // readingwordsfromfile
   private static void readWordsFromFile() {
     fileSystem.readFile(
-      "wordsFile",
-      result -> {
-        if (result.succeeded()) {
-          String content = result.result().toString();
-          String[] words = content.split("\\r?\\n");
-          System.out.println(Arrays.toString(words));
-          // for (String word : words) {
-          try (
-            BufferedReader br = new BufferedReader(new FileReader("wordsFile"))
-          ) {
-            String line;
-            while ((line = br.readLine()) != null) {
-              line = line.trim();
-              if (!line.isEmpty()) {
-                wordList.add(line);
+        "wordsFile",
+        result -> {
+          if (result.succeeded()) {
+            String content = result.result().toString();
+            String[] words = content.split("\\r?\\n");
+            System.out.println(Arrays.toString(words));
+            // for (String word : words) {//comment
+            try (
+                BufferedReader br = new BufferedReader(new FileReader("wordsFile"))) {
+              String line;
+              while ((line = br.readLine()) != null) {
+                line = line.trim();
+                if (!line.isEmpty()) {
+                  wordList.add(line);
+                }
               }
+            } catch (IOException e) {
+              e.printStackTrace();
             }
-          } catch (IOException e) {
-            e.printStackTrace();
+            // }
+          } else {
+            System.out.println("Failed to read words from file");
           }
-          //}
-        } else {
-          System.out.println("Failed to read words from file");
-        }
-      }
-    );
+        });
   }
 
-  //saving words to file
+  // saving words to file
   public static void newWordsFile(String newLexical) { // Method to save the words in a file
     File file;
     FileWriter write;
     PrintWriter line;
-    //String value = newValue;
+    
     String lexical = newLexical;
-    // JsonObject words = word;
 
     file = new File("wordsFile");
     if (!file.exists()) {
@@ -135,7 +131,6 @@ public class MainVerticle extends AbstractVerticle {
       try {
         write = new FileWriter(file, true);
         line = new PrintWriter(write);
-        // line.println(value);
         line.println((lexical));
         line.close();
         write.close();
@@ -145,8 +140,8 @@ public class MainVerticle extends AbstractVerticle {
     }
   }
 
-  //Value
-  public static String lastOne(String thisWord) { //Method to change words to value
+  // Value
+  public static String lastOne(String thisWord) { // Method to change words to value
     String input = thisWord;
     String value = "";
     for (int i = 0; i < input.length(); ++i) {
@@ -161,14 +156,14 @@ public class MainVerticle extends AbstractVerticle {
     return value;
   }
 
-  //atr
+  // atr
   int value = 0;
   String lexical = "null";
   String closestValue = "null";
   private static List<String> wordList = new ArrayList<>();
 
-  //hastext
-  public static boolean hasText(String[] text) { //To see if the PUT has the word "text"
+  // hastext
+  public static boolean hasText(String[] text) { // To see if the PUT has the word "text"
     boolean good = false;
     if (text[0].contains("text")) {
       good = true;
@@ -176,7 +171,7 @@ public class MainVerticle extends AbstractVerticle {
     return good;
   }
 
-  //extra from value
+  // extra from value
   public static String removeLastCharacter(String str) { // Value got extra char, removing them here
     String result = null;
     if ((str != null) && (str.length() > 0)) {
@@ -185,7 +180,7 @@ public class MainVerticle extends AbstractVerticle {
     return result;
   }
 
-  //newmethod
+  // newmethod
   private String closestWordLexical(String text) {
     int closestDistance = Integer.MAX_VALUE;
     String closestWord = null;
@@ -199,7 +194,7 @@ public class MainVerticle extends AbstractVerticle {
     return closestWord;
   }
 
-  //main
+  // main
   @Override
   public void start(Promise<Void> start) throws Exception {
     router = Router.router(vertx);
@@ -207,54 +202,52 @@ public class MainVerticle extends AbstractVerticle {
     fileSystem = vertx.fileSystem();
     readWordsFromFile();
     router
-      .route(HttpMethod.POST, "/analyze")
-      .handler(rc -> {
-        JsonObject json = rc.body().asJsonObject();
-        JsonObject jsonResponse = new JsonObject();
-        // JsonObject jsonResult = compareWords(closestValue, wordList);
-        System.out.println(json.encodePrettily());
+        .route(HttpMethod.POST, "/analyze")
+        .handler(rc -> {
+          JsonObject json = rc.body().asJsonObject();
+          JsonObject jsonResponse = new JsonObject();
+          System.out.println(json.encodePrettily());
 
-        String[] divide = rc.body().asString().split(":");
-        String[] secondD = divide[1].split("}");
+          String[] divide = rc.body().asString().split(":");
+          String[] secondD = divide[1].split("}");
 
-        lexical = secondD[0];
-        String result = lexical.replaceAll("^\"|\"$", "");
+          lexical = secondD[0];
+          String result = lexical.replaceAll("^\"|\"$", "");
 
-        String lastOne = removeLastCharacter(lastOne(result));
+          String lastOne = removeLastCharacter(lastOne(result));
 
-        System.out.println(lastOne); //value
-        System.out.print(result); //word
+          System.out.println(lastOne); // value
+          System.out.print(result); // word
 
-        if (hasText(divide)) {
-          if (!wordList.isEmpty()) {
-            newWordsFile(result);
-            jsonResponse.put("value", closestValue(lastOne, wordList));
-            jsonResponse.put("lexical", closestWordLexical(result));
-            HttpServerResponse response = rc.response();
-            response.putHeader("content-type", "application/json");
-            response.setChunked(true);
-            // response.write(jsonResult.encode());
-            // Write to the response and end it
-            response.write(jsonResponse.encode());
-            response.end(); //("{\"Closest Value\": Closest lexical}");
-          } else {
-            wordList.add(result);
-            HttpServerResponse response = rc.response();
-            response.putHeader("content-type", "application/json");
-            // Write to the respon  se and end it
-            response.end("{\"Null\":Null}");
+          if (hasText(divide)) {
+            if (!wordList.isEmpty()) {
+              newWordsFile(result);
+              jsonResponse.put("value", closestValue(lastOne, wordList));
+              jsonResponse.put("lexical", closestWordLexical(result));
+              HttpServerResponse response = rc.response();
+              response.putHeader("content-type", "application/json");
+              response.setChunked(true);
+              // Write to the response and end it
+              response.write(jsonResponse.encode());
+              response.end(); // ("{\"Closest Value\": Closest lexical}");
+            } else {
+              wordList.add(result);
+              HttpServerResponse response = rc.response();
+              response.putHeader("content-type", "application/json");
+              // Write to the respon se and end it
+              response.end("{\"Null\":Null}");
+            }
           }
-        }
-      });
-
+        });
     vertx
-      .createHttpServer()
-      .requestHandler(router)
-      .listen(config().getInteger("http.port", 8080))
-      .onSuccess(server -> {
-        this.MainVerticle = server;
-        start.complete();
-      })
-      .onFailure(start::fail);
+        .createHttpServer()
+        .requestHandler(router)
+        .listen(config().getInteger("http.port", 8080))
+        .onSuccess(server -> {
+          this.MainVerticle = server;
+          start.complete();
+        })
+        .onFailure(start::fail);
   }
 }
+
