@@ -30,17 +30,17 @@ public class MainVerticle extends AbstractVerticle {
   public static int readingValue(String word) {
     int sum = 0;
     try {
-      System.out.println("before converting" + word);
+     // System.out.println("before converting" + word);
       int[] value = convertToNumArray(word);
-      System.out.println("after converting " + Arrays.toString(value));
+    //  System.out.println("after converting " + Arrays.toString(value));
       for (int i = 0; i < value.length; i++) {
         sum = sum + value[i];
       }
     } catch (NumberFormatException e) {
-      System.out.println("Invalid number:" + word);
+   //   System.out.println("Invalid number:" + word);
       sum = readingValue(lastOne(word));
     }
-    System.out.println("Value of " + word + " is " + sum);
+   // System.out.println("Value of " + word + " is " + sum);
 
     return sum;
   }
@@ -51,13 +51,13 @@ public class MainVerticle extends AbstractVerticle {
     for (int i = 0; i < parts.length; i++) {
       nums[i] = Integer.parseInt(parts[i]);
     }
-    System.out.println("converting " + Arrays.toString(nums));
+   // System.out.println("converting " + Arrays.toString(nums));
     return nums;
   }
 
   public static String closestValue(String word, List<String> words) {
     int targetValue = readingValue(word);
-    System.out.println("Target value is " + targetValue);
+   // System.out.println("Target value is " + targetValue);
     int closestDifference = Integer.MAX_VALUE;
     String closestWord = "";
     for (String w : words) {
@@ -66,7 +66,7 @@ public class MainVerticle extends AbstractVerticle {
           continue; // Skip the target word if it's already in the list
         }
         int currentValue = readingValue(w);
-        System.out.println("The Value of " + w + " is " + currentValue);
+       // System.out.println("The Value of " + w + " is " + currentValue);
         int difference = Math.abs(targetValue - currentValue);
         if (difference < closestDifference) {
           closestDifference = difference;
@@ -85,7 +85,7 @@ public class MainVerticle extends AbstractVerticle {
           if (result.succeeded()) {
             String content = result.result().toString();
             String[] words = content.split("\\r?\\n");
-            System.out.println(Arrays.toString(words));
+           // System.out.println(Arrays.toString(words));
             // for (String word : words) {//comment
             try (
                 BufferedReader br = new BufferedReader(new FileReader("wordsFile"))) {
@@ -152,7 +152,7 @@ public class MainVerticle extends AbstractVerticle {
       int n = (int) ch - (int) 'a' + 1;
       value += String.valueOf(n);
     }
-    System.out.println("last one value: " + value);
+   //System.out.println("last one value: " + value);
     return value;
   }
 
@@ -216,8 +216,8 @@ public class MainVerticle extends AbstractVerticle {
 
           String lastOne = removeLastCharacter(lastOne(result));
 
-          System.out.println(lastOne); // value
-          System.out.print(result); // word
+        //  System.out.println(lastOne); // value
+       //   System.out.print(result); // word
 
           if (hasText(divide)) {
             if (!wordList.isEmpty()) {
